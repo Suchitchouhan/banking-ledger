@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "c71f59d1-6ad1-4542-bac0-79053dd769e9",
+		"name": "Banking-Ledger",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16692213",
+		"_collection_link": "https://red-meadow-872425.postman.co/workspace/Team-Workspace~0d88d169-56cc-4182-8527-507663d1570e/collection/16692213-c71f59d1-6ad1-4542-bac0-79053dd769e9?action=share&source=collection_link&creator=16692213"
+	},
+	"item": [
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"suchit chouhan\",\n    \"initial_amount\": 1000.00\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Accounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/accounts/28c61972-aac3-4957-8777-b75f0e3269ab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"28c61972-aac3-4957-8777-b75f0e3269ab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit Funds",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 500.00,\n    \"description\": \"Salary\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/28c61972-aac3-4957-8777-b75f0e3269ab/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"28c61972-aac3-4957-8777-b75f0e3269ab",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw Funds",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 200.00,\n    \"description\": \"Groceries\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/accounts/28c61972-aac3-4957-8777-b75f0e3269ab/withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"accounts",
+						"28c61972-aac3-4957-8777-b75f0e3269ab",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
