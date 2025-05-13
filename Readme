@@ -44,7 +44,7 @@ To run the service, ensure you have the following installed:
 
 1. Clone the repository:
      ```bash
-     git clone https://github.com/yourusername/banking-ledger.git
+     git clone https://github.com/Suchitchouhan/banking-ledger.git
      cd banking-ledger
      ```
 
